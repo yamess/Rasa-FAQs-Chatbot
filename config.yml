@@ -8,6 +8,7 @@ pipeline:
     model_name: bert
     model_weights: "rasa/LaBSE"
   - name: DIETClassifier
+    constrain_similarities: True
     epochs: 100
     learning_rate: 0.001
   - name: ResponseSelector
@@ -18,7 +19,9 @@ pipeline:
 
 policies:
    - name: MemoizationPolicy
+     use_gpu: True
    - name: TEDPolicy
      epochs: 100
      use_gpu: True
    - name: RulePolicy
+     use_gpu: True
