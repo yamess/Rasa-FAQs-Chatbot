@@ -58,7 +58,7 @@ responses:
   - text: "Since we have selected the written examination list according to strict recruitment process, we are very sorry. For students who have not received the written examination notification, they cannot participate in the written examination of campus recruitment."
 
   utter_faq/interview_arrangement:
-- text: "Interview schedules are different for different positions. Except for special arrangements, interviews will be arranged about one week after the written test."
+  - text: "Interview schedules are different for different positions. Except for special arrangements, interviews will be arranged about one week after the written test."
 
   utter_faq/interview_times:
   - text: "Under normal circumstances, the business department and the human resources department will arrange an interview at the same time or separately. Some special positions require 2 or more interviews."
