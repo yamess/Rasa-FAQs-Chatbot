@@ -1,0 +1,24 @@
+recipe: default.v1
+
+language: en
+
+pipeline:
+  - name: WhitespaceTokenizer
+  - name: LanguageModelFeaturizer
+    model_name: bert
+    model_weights: "rasa/LaBSE"
+  - name: DIETClassifier
+    epochs: 100
+    learning_rate: 0.001
+  - name: ResponseSelector
+    epochs: 100
+  - name: FallbackClassifier
+    threshold: 0.3
+    ambiguity_threshold: 0.1
+
+policies:
+   - name: MemoizationPolicy
+   - name: TEDPolicy
+     epochs: 100
+     use_gpu: True
+   - name: RulePolicy
